@@ -4,10 +4,10 @@ Different functions to compute genus, Jacobian decomposition, number of $\mathbb
 
 ## Examples
 
-1. Compute decomposition of the Jacobian of X0(366) / < W_61, W_2 >
+- Compute decomposition of the Jacobian of X0(366) / < W_61, W_2 >
 
 ```magma
-load "function.m"
+load "function.m";
 N := 366; // Level
 TN := [* 61, 122, 2, 1 *]; // Subgroup of involutions
 prec := 20; // Number of coefficients of the q-expansion
