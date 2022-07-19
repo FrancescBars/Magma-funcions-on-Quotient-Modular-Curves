@@ -22,8 +22,8 @@ else
                nu_2factorminus1:=1;
                nu_2factorminus2:=1;
                for d in [1 .. #q] do
-nu_2factorminus1:=nu_2factorminus1*(1+LegendreSymbol(-1,q[d]));
-nu_2factorminus2:=nu_2factorminus2*(1+LegendreSymbol(-2,q[d]));
+                  nu_2factorminus1:=nu_2factorminus1*(1+LegendreSymbol(-1,q[d]));
+                  nu_2factorminus2:=nu_2factorminus2*(1+LegendreSymbol(-2,q[d]));
                end for;
                return nu_2factorminus1+nu_2factorminus2;
              else
@@ -32,7 +32,7 @@ nu_2factorminus2:=nu_2factorminus2*(1+LegendreSymbol(-2,q[d]));
                   l:=Divisors(Numerator(m/n));
                   nu_4factorminus1:=1; nu_4sumeuler:=0;
                   for d in [1..#q] do
-nu_4factorminus1:=nu_4factorminus1*(1+LegendreSymbol(-1,q[d]));
+                           nu_4factorminus1:=nu_4factorminus1*(1+LegendreSymbol(-1,q[d]));
                   end for;
                   for dd in [1..#l] do
                      ss:=Numerator(m/(n*l[dd]));
