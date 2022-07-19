@@ -14,5 +14,5 @@ prec := 20; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, #TN);
 print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decomposition
 print HH[2]; // List the modular forms with q-expansion that are factor of the Jacobian, one could repeated if such factor appears
-print HH[3]; // List the number fields of the list of modular forms given in HH[1] with the same order 
+print HH[3]; // List the number fields of the list of modular forms given in HH[2], the order is the same 
 ```
