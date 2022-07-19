@@ -4,7 +4,7 @@ Different functions to compute genus, Jacobian decomposition, number of $\mathbb
 
 ## Examples
 
-- Compute decomposition of the Jacobian of X0(366) / < W_61, W_2 >
+- Compute decomposition of the Jacobian of $X_0(366) / \langle w_61, w_2 \rangle$
 
 ```magma
 load "function.m";
