@@ -369,3 +369,79 @@ return M;
 
 end function;
 
+FpnpointsforQuotientcurveX0NWN:=function(N,prime,JacDecomp,FieldDefinition,bound); 
+L:=JacDecomp; 
+p:=prime; 
+F:=FieldDefinition;
+felm:=# F; 
+bod:=bound;
+
+
+C:=ComplexField(100); R<x>:=PolynomialRing(C); pj:=0*x+1; Roo:=[**]; 
+for j in [1 .. felm] do
+
+   if Degree(F[j]) eq 1 then
+
+       cc:=Roots(x^2-Coefficient(L[j],p)*x+p,C);
+
+       Roo:=Append(Roo,cc);
+
+      pj:=pj*(x^2-Coefficient(L[j],p)*x+p);
+
+   else
+
+    dd:=Degree(F[j]);
+
+    u:=Roots(DefiningPolynomial(F[j]),C); uu:= # u;
+
+       for m in [1 .. uu] do
+
+       f := hom< F[j] -> C | u[m][1]>;
+
+       cc2:=Roots(x^2-f(Coefficient(L[j],p))*x+p,C);
+
+       Roo:=Append(Roo,cc2);
+
+       pj:=pj*(x^2-f(Coefficient(L[j],p))*x+p);
+
+       end for;
+
+   end if;
+
+end for; 
+pjdegree:=Degree(pj); 
+
+PR:=[* *];
+
+  d2:=Degree(pj);
+
+long:= # Roo;
+
+
+
+
+
+for nn in [1 .. bod] do s:=0;
+
+   for i in [1 .. long] do
+
+     for j in [1..2] do
+
+      if Roo[i][j][2] gt 0 then
+
+s:=s+(Roo[i][j][2])*(Roo[i][j][1])^(nn) ;
+
+   else
+
+   s:=s;
+
+   end if;
+
+end for; 
+end for;
+ a:=Round(1+p^(nn)-s); 
+ PR:=Append(PR,a); 
+ end for;
+
+return PR;
+end function;
