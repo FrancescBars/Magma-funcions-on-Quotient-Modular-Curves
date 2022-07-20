@@ -17,7 +17,7 @@ genus:=generexoN(N);
 print genus; //Return the genus of X_0(N)
 ```
 
-- For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points
+- For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points. See not degree two map over the rationals to the elliptic curve E61a by counting $\mathbb{F}_9$-points of the quotient curve and the elliptic curve.
 
 ```magma
 load "function.m";
