@@ -27,7 +27,7 @@ t:=#TN; //Order of the subgroup of involutions
 genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/TN
 prec := 20; // Number of coefficients of the q-expansion
-HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, #TN);
+HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
 print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decomposition (if one factor appears n times, appears n times in Jacobian decomposition)
 // If return 0000000000 then each factor appears in Jacobian decomposition BUT if one factors appears n times in Jacob.decom, here could appear m times with m ge n.
 //For N square free as our example should appear 11111111111 and compute the programme directly the Jacobian decomposition
