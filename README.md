@@ -23,9 +23,13 @@ print genus; //Return the genus of X_0(N)
 load "function.m";
 N := 366; // Level
 TN := [* 61, 122, 2, 1 *]; // Subgroup of involutions
+t:=#TN; //Order of the subgroup of involutions
+genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
+print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/TN
 prec := 20; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, #TN);
-print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decomposition
+print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decomposition (if one factor appears n times, appears n times in Jacobian decomposition)
+// If return 0000000000 then each factor appears in Jacobian decomposition BUT if one factors appears n times in Jacob.decom, here could appear m times with m ge n
 print HH[2]; // List the modular forms with q-expansion that are factor of the Jacobian, (could appear repeated if some factor of the Jacobian can appeared repeated)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2], the order is the same 
 ```
