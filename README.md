@@ -33,4 +33,8 @@ print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decom
 //For N square free as our example should appear 11111111111 and compute the programme directly the Jacobian decomposition
 print HH[2]; // List the modular forms with q-expansion that are factor of the Jacobian, (could appear repeated if some factor of the Jacobian can appeared repeated)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2], the order is the same 
+p:=3// A prime number not dividing the level N
+bound:=20// For bound n where we will compute F_{p^n} points of the modular curve
+FpnpointsQuotientCurve:=FpnpointsforQuotientcurveX0NWN(N,p,HH[1],HH[2],bound);
+print FpnpointsQuotientCurve; //List the number of F_{p^n}-points for the modular curve X0(N)/TN for n=1 until bound
 ```
