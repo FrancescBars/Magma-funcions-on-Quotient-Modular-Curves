@@ -445,3 +445,43 @@ end for;
 
 return PR;
 end function;
+
+MapdegreedtoEC:=function(prime,degree,bound,apCoefficientEC,FpNpointsModularCurveList)
+
+p:=prime;
+a3:=apCoefficientEC; bod:=bound; deg:=degree;
+
+PR2:=[* *]; 
+
+C:=ComplexField(100); R<x>:=PolynomialRing(C);
+cearrels:=Roots(x^2-a3*x+p,C);
+
+
+
+for i in [1..bod] do
+
+
+
+b:=deg*(p^i+1-Round(cearrels[1][1]^i+ p^i/cearrels[1][1]^i));
+
+PR2:=Append(PR2,b);
+end for;
+
+el:=#FpNpointsModularCurveList; tt:=Min(el,bod);
+
+NoDegreeMaptosuchEC:=[**];
+
+for k in [1..tt] do
+
+difference:=FpNpointsModularCurveList[k]-PR2[k];
+
+if difference ge 1 then
+
+NoDegreeMaptosuchEC:=Append(NoDegreeMaptosuchEC,[*difference,p^k*]);
+end if;
+
+end for;
+
+return NoDegreeMaptosuchEC;
+
+end function;
