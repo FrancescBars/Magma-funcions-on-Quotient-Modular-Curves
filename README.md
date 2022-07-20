@@ -40,5 +40,6 @@ print FpnpointsQuotientCurve; //List the number of F_{p^n}-points for the modula
 degree:=2; // degree of the map of Quotient curve to elliptic curve
 apcoefficient:=-2;// Corresponds to E61a the a_p-coefficient of the q-expansion of the associated modular form
 NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotientCurve);
-print NondegreedmaptoEC ;// List if any of the set (p^n, Integer) n<bound such that |X_0(N)/W_N(F_{p^n})|-degree*|EllipticCurve(F_{p^n})|=Integer, thus no degree map //between quotient modular curve to such elliptic curve defined over the rationals if the list is not empty, recall p does not divide N
+print NondegreedmaptoEC ;// List if any of the set (p^n, Integer) n<bound such that |X_0(N)/W_N(F_{p^n})|-degree*|EllipticCurve(F_{p^n})|=Integer, thus no degree map //between quotient modular curve to such elliptic curve defined over the rationals if the list is not empty, recall p does not divide N. In the example with
+//this method we know that there is no degree two map over the rationals from X_0(366)/<w_61,w_2> to the elliptic curve E61a, by use F_9-points.
 ```
