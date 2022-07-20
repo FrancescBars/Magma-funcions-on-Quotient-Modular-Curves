@@ -3,8 +3,21 @@
 Different functions to compute genus, Jacobian decomposition, number of $\mathbb{F}_{q^n}$-points, and also different functions on quotient modular curves $X_0(N)/W_N$
 
 ## Examples
+- Compute number of fixed points of Atkin-Lehner involution $w_d$ on $X_0(366)$ with $(d,N/d)=1$ and the genus of $X_0(366)
+```magma
+load "function.m";
+N := 366; // Level
+d:=61; // d an integer with (d,N/d)=1
+d2:=2; // d2 an integer with (d2,N/d2)=1
+Fixedsmall:=fixedpointsALinvsmall(N,d2);
+print Fixedsmall; // Return the number of fixed points of w_{d2} when d2 is 1,2,3 or 4.
+Fixedbig:=fixedpointsALinvbig(N,d);
+print Fixedbig; // Return the number of fixed points of w_d when d is strictly bigger than 4
+genus:=generexoN(N);
+print genus; //Return the genus of X_0(N)
+```
 
-- Compute decomposition of the Jacobian of $X_0(366) / \langle w_{61}, w_2 \rangle$
+- For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points
 
 ```magma
 load "function.m";
