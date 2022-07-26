@@ -71,3 +71,25 @@ NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotient
 print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound where |X_0(N)/WN(F_{p^n})|-3|E154a(F_{p^n})|=k>0, list (k,p^n).
 
 ``
+
+
+- For $X_0(308)/\langle w_4,w_{11} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
+
+```` magma
+
+load "function.m";
+N := 308; // Level
+TN := [* 4, 11, 44 *]; // Need to list all non-trivial involutions of the subgroup WN
+t:=4; //Order of the subgroup of involutions that we work
+genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
+print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/WN
+prec := 30; // Number of coefficients of the q-expansion
+HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
+print HH[1]; // Returns 000000000 implying that the function NOT obtain que Q-Jacobian decomposition (there are too much reaped modular forms!!!)
+print HH[2]; // List the modular forms with q-expansion that appear in the Jacobian, (and repetitions also)
+print HH[3]; // List the number fields of the list of modular forms given in HH[2].
+
+``
+
+
+
