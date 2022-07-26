@@ -52,7 +52,7 @@ N := 308; // Level
 TN := [* 4, 7, 28 *]; // Need to list all non-trivial involutions of the subgroup WN
 t:=4; //Order of the subgroup of involutions that we work
 genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
-print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/TN
+print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/WN
 prec := 30; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
 print HH[1]; // Returns 11111111111111 implying that the function obtained que Q-Jacobian decomposition
