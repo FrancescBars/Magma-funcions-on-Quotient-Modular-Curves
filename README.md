@@ -22,7 +22,7 @@ print genus; //Return the genus of X_0(N)
 ```magma
 load "function.m";
 N := 366; // Level
-TN := [* 61, 122, 2, 1 *]; // Subgroup of involutions
+TN := [* 61, 122, 2, 1 *]; // List the elements of the subgroup of involutions
 t:=#TN; //Order of the subgroup of involutions
 genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/TN
