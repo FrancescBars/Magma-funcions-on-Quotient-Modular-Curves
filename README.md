@@ -72,13 +72,13 @@ print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound 
 
 ````
 
-- For $X_0(308)/\langle w_4,w_{11} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
+- For $X_0(308)/\langle w_{44},w_{77} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
 
 ```` magma
 
 load "function.m";
 N := 308; // Level
-TN := [* 4, 11, 44 *]; // Need to list all non-trivial involutions of the subgroup WN
+TN := [* 44, 28, 77 *]; // Need to list all non-trivial involutions of the subgroup WN
 t:=4; //Order of the subgroup of involutions that we work
 genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/WN
