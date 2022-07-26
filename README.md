@@ -2,7 +2,7 @@
 
 Different functions for quotient modular curves $X_0(N)/W_N$ with $W_N$ a subgroup of $B(N)$ the full subgroup of all Atkin-Lehner involutions of $X_0(N)$. 
 
-In particular functions to compute genus, $\mathbb{Q}$-Jacobian decomposition, number of $\mathbb{F}$-points with $p\nmid N$, and testing by counting $\mathbb{F}_{p^n}$-points if maybe possible a degree $d$ map from $X_0(N)/W_N$ to an elliptic curve that appear in the $\mathbb{Q}$-decomposition of the quotient modular curve. The subgroup $W_N$ can be also trivial or the full $B(N)$.
+In particular functions to compute genus, $\mathbb{Q}$-Jacobian decomposition, number of $\mathbb{F}_{p^n}$-points with $p\nmid N$, and testing by counting $\mathbb{F}_{p^n}$-points if could be possible a degree $d$ map from $X_0(N)/W_N$ to an elliptic curve that appears in the $\mathbb{Q}$-decomposition of the quotient modular curve. The subgroup $W_N$ could be also the trivial subgroup or the full $B(N)$.
 
 ## Examples
 - Compute number of fixed points of Atkin-Lehner involution $w_d$ on $X_0(366)$ with $(d,N/d)=1$ and the genus of $X_0(366)$
