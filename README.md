@@ -87,6 +87,15 @@ HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
 print HH[1]; // Returns 0 or 000000000 implying that the function NOT obtain que Q-Jacobian decomposition (there are too much reaped modular forms!!!)
 print HH[2]; // List the modular forms with q-expansion that appear in the Jacobian, (and repetitions also)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2].
+print HH[4];// List of the levels (recall a repeated form that appears at level y can appear repeated at level yk)
+Newforms:=[*HH[2][1], HH[2][2], HH[2][4],HH[2][5],HH[2][6],HH[2][7],HH[2][9]*]; /* Take only newforms appers in Jacob.decomp.this can be check with HH[5] where last factors says the AL-involution action and is old if the size of the matrix corresponding to the AL-involution is bigger than the dimension over the rationals of the field of the modular form */
+NewHHForms:=[*HH[2][1], HH[2][2], HH[2][4],HH[2][4],HH[2][5],HH[2][6],HH[2][7],HH[2][9]*];  /*Choise the newforms and fix the times that appears repeated in the Jacobian, see JA paper Bars-González, see also section 2 ExampleJacobiancountingpointsfinitefield.pdf */
+NewHHFields:=[*HH[3][1], HH[3][2], HH[3][4],HH[3][4],HH[3][5],HH[3][6],HH[3][7],HH[3][9]*];  // The corresponding fields of the modular forms
+
+p:=3;// A prime number not dividing the level N
+bound:=20;// For bound n where we will compute F_{p^n} points of the modular curve
+FpnpointsQuotientCurve:=FpnpointsforQuotientcurveX0NWN(N,p,NewHHForms,NewHHFields,bound);
+print FpnpointsQuotientCurve; //List the number of F_{p^n}-points for the modular curve X0(N)/TN for n=1 until bound (here with HH[1]=0).
 
 ````
 
