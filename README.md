@@ -70,8 +70,7 @@ apcoefficient:=0;// Corresponds to a_p-coefficient for E154a (or E154b) which ap
 NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotientCurve);
 print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound where |X_0(N)/WN(F_{p^n})|-3|E154a(F_{p^n})|=k>0, list (k,p^n).
 
-``
-
+````
 
 - For $X_0(308)/\langle w_4,w_{11} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
 
@@ -89,7 +88,7 @@ print HH[1]; // Returns 000000000 implying that the function NOT obtain que Q-Ja
 print HH[2]; // List the modular forms with q-expansion that appear in the Jacobian, (and repetitions also)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2].
 
-``
+````
 
 
 
