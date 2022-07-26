@@ -65,6 +65,6 @@ print FpnpointsQuotientCurve; //List the number of F_{p^n}-points for the modula
 degree:=3; // degree of the map of Quotient curve to elliptic curve that want to test
 apcoefficient:=0;// Corresponds to a_p-coefficient for E11a
 NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotientCurve);
-
-```
 print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound where |X_0(N)/WN(F_{p^n})|-3|E11a(F_{p^n})|>k, list (p,3^n).
+
+``
