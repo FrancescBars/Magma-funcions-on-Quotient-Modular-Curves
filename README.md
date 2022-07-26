@@ -68,6 +68,6 @@ print FpnpointsQuotientCurve; //List the number of F_{p^n}-points for the modula
 degree:=3; // degree of the map of Quotient curve to elliptic curve that want to test
 apcoefficient:=0;// Corresponds to a_p-coefficient for E154a (or E154b) which appears Q-Jacobian decomposition quotient modular curve
 NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotientCurve);
-print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound where |X_0(N)/WN(F_{p^n})|-3|E154a(F_{p^n})|>k, list (k,p^n).
+print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound where |X_0(N)/WN(F_{p^n})|-3|E154a(F_{p^n})|=k>0, list (k,p^n).
 
 ``
