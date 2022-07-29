@@ -125,14 +125,14 @@ nu_nodd3mod4_no2:=nu_nodd3mod4_no2*(1+LegendreSymbol(-n,PD[j]));
                       nu_nodd1mod4_2:=ClassNumber(-4*n);
                       PD2:=PrimeDivisors(Numerator(m/(2*n)));
                        for k in [1..#PD2] do
-nu_nodd1mod4_2:=nu_nodd1mod4_2*(1+LegendreSymbol(-n,PD2[k]));
+                        nu_nodd1mod4_2:=nu_nodd1mod4_2*(1+LegendreSymbol(-n,PD2[k]));
                        end for;
                     return nu_nodd1mod4_2;
                    end if;
               else
                   nu_nodd1mod4_no2:=ClassNumber(-4*n);
                      for i in [1 .. #PD] do
-nu_nodd1mod4_no2:=nu_nodd1mod4_no2*(1+LegendreSymbol(-n,PD[i]));
+                      nu_nodd1mod4_no2:=nu_nodd1mod4_no2*(1+LegendreSymbol(-n,PD[i]));
                      end for;
                    return nu_nodd1mod4_no2;
               end if;
@@ -176,14 +176,14 @@ generexoN:=function(b)
          if factor_b[y][1] eq 3 then
              if factor_b[y][2] gt 1 then
                order3elliptic:=0;
-order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
+               order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
              else
-order3elliptic:=order3elliptic*(1+LegendreSymbol(-3,factor_b[y][1]));
-order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
+               order3elliptic:=order3elliptic*(1+LegendreSymbol(-3,factor_b[y][1]));
+               order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
              end if;
          else
-order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
-order3elliptic:=order3elliptic*(1+LegendreSymbol(-3,factor_b[y][1]));
+           order4elliptic:=order4elliptic*(1+LegendreSymbol(-1,factor_b[y][1]));
+           order3elliptic:=order3elliptic*(1+LegendreSymbol(-3,factor_b[y][1]));
          end if;
       end if;
     end for;
@@ -216,10 +216,10 @@ for i in [1..#WN] do
        else
           if WN[i] gt 4 then
              nu_Ddi:=fixedpointsALinvbig(N,WN[i]);
-FixedpointsALinvolutions:=Append(FixedpointsALinvolutions,nu_Ddi);
+             FixedpointsALinvolutions:=Append(FixedpointsALinvolutions,nu_Ddi);
           else
              nu_Ddi:=fixedpointsALinvsmall(N,WN[i]);
-FixedpointsALinvolutions:=Append(FixedpointsALinvolutions,nu_Ddi);
+             FixedpointsALinvolutions:=Append(FixedpointsALinvolutions,nu_Ddi);
           end if;
        end if;
      else
@@ -231,8 +231,9 @@ end for;
 CountAllFixedPointsALinvolutions:=0;
 
 for u in FixedpointsALinvolutions do
-CountAllFixedPointsALinvolutions:=CountAllFixedPointsALinvolutions+u;
-end for; if vv eq 0 then
+  CountAllFixedPointsALinvolutions:=CountAllFixedPointsALinvolutions+u;
+end for; 
+if vv eq 0 then
   genusxoN:=generexoN(N);
   genusxoNQuotient:=1+t^(-1)*(genusxoN-1-(CountAllFixedPointsALinvolutions/2));
 else
