@@ -246,9 +246,11 @@ end function;
 
 JacobianDecompositionQuotientX0NWN:=function(n,WN,length,t); N:=n;
 AtkinLehnerfix:=WN;
-Involutions:=#AtkinLehnerfix; L:=[*
-*];F:=[*
-*];Level:=[* *]; ALaction:=[**];
+Involutions:=#AtkinLehnerfix; 
+L:=[**];
+F:=[**];
+Level:=[* *]; 
+ALaction:=[**];
 
 Pd:=PrimeDivisors(N); mt:=[**];
 
@@ -256,7 +258,7 @@ for prime in Pd do
       op:=Valuation(N,prime);
       primepower:=Gcd(prime^(op), N);
 
-  mt:=Append(mt, primepower);
+      mt:=Append(mt, primepower);
 end for;
 
 
@@ -264,7 +266,7 @@ Nd:=Divisors(N); countergenus:=0;
 
 for j in Nd do
 
-MS:=NewformDecomposition(CuspidalSubspace(ModularSymbols(j,2,1)));
+      MS:=NewformDecomposition(CuspidalSubspace(ModularSymbols(j,2,1)));
 
        m:=#MS;
 
@@ -288,15 +290,15 @@ MS:=NewformDecomposition(CuspidalSubspace(ModularSymbols(j,2,1)));
 
          for i in [1..m] do
 
-            f:=Eigenform(MS[i],length);
+             f:=Eigenform(MS[i],length);
 
-            f2:=MS[i];
+             f2:=MS[i];
 
-            K:=Parent(Coefficient(f,3)); d:=Dimension(MS[i]);
+             K:=Parent(Coefficient(f,3)); d:=Dimension(MS[i]);
 
-            X:=IdentityMatrix(Rationals(), d);
+             X:=IdentityMatrix(Rationals(), d);
 
-            u:=0;
+             u:=0;
                 for jo in [1..Involutions] do
                   dd:=GCD(j,AtkinLehnerfix[jo]);
 
@@ -329,8 +331,7 @@ MS:=NewformDecomposition(CuspidalSubspace(ModularSymbols(j,2,1)));
              for i in [1..#Pd] do
                if GCD(mt[i],j) eq mt[i] then
 
-                ALactionf:=Append(ALactionf, [*
-AtkinLehner(f2,mt[i]),mt[i]*]);
+                ALactionf:=Append(ALactionf, [*AtkinLehner(f2,mt[i]),mt[i]*]);
 
 
                end if;
