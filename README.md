@@ -1,4 +1,4 @@
-# Magma funcions on quotient modular curves
+# Magma functions on quotient modular curves
 
 Different functions for quotient modular curves $X_0(N)/W_N$ with $W_N$ a subgroup of $B(N)$ the full subgroup of all Atkin-Lehner involutions of $X_0(N)$. 
 
