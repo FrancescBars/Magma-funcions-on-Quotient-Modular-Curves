@@ -8,7 +8,7 @@ and testing by counting points in a finite field if we can discard a degree $d$ 
 ## Examples
 - Compute number of fixed points of Atkin-Lehner involution $w_d$ on $X_0(366)$ with $(d,N/d)=1$ and the genus of $X_0(366)$
 ```magma
-load "function.m";
+load "funcions.m";
 N := 366; // Level
 d:=61; // d an integer with (d,N/d)=1
 d2:=2; // d2 an integer with (d2,N/d2)=1
@@ -23,7 +23,7 @@ print genus; //Return the genus of X_0(N)
 - For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. See not degree two map over the rationals to the elliptic curve E61a by counting $\mathbb{F}_9$-points of the quotient curve and the elliptic curve.
 
 ```magma
-load "function.m";
+load "funcions.m";
 N := 366; // Level
 TN := [* 61, 122, 2, 1 *]; // List the elements of the subgroup of involutions
 t:=#TN; //Order of the subgroup of involutions
@@ -50,7 +50,7 @@ print NondegreedmaptoEC ;// List if any of the set (p^n, Integer) n<bound such t
 
 ```` magma
 
-load "function.m";
+load "funcions.m";
 N := 308; // Level
 TN := [* 4, 7, 28 *]; // Need to list all non-trivial involutions of the subgroup WN
 t:=4; //Order of the subgroup of involutions that we work
@@ -76,7 +76,7 @@ print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound 
 
 ```` magma
 
-load "function.m";
+load "funcions.m";
 N := 308; // Level
 TN := [* 44, 28, 77 *]; // Need to list all non-trivial involutions of the subgroup WN
 t:=4; //Order of the subgroup of involutions that we work
