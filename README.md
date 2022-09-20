@@ -31,8 +31,8 @@ genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/TN
 prec := 20; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
-print HH[1]; // Should return 11111111111111 if compute the exact Jacobian decomposition (if one factor appears n times, appears n times in Jacobian decomposition)
-// If return 0 then each factor appears in Jacobian decomposition BUT if one factors appears n times in Jacob.decom, here could appear m times with m ge n.
+print HH[1]; // Should return 11111111111111 if such Magma function JacobianDecompositionQuotientX0NWN compute the exact Jacobian decomposition (if one factor appears n times, appears n times in Jacobian decomposition)
+// If returns 0 then each factor (i.e. each abelian variety attached to a modular form listed in HH[1]) appears in the Jacobian decomposition BUT if one factors appears n times in Jacob.decom, here could appear m times (in the list HH[1]) with m ge n.
 //For N square free as our example should appear 11111111111 and compute the programme directly the Jacobian decomposition
 print HH[2]; // List the modular forms with q-expansion that are factor of the Jacobian, (could appear repeated if some factor of the Jacobian can appeared repeated)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2], the order is the same 
@@ -44,7 +44,7 @@ degree:=2; // degree of the map of Quotient curve to elliptic curve
 apcoefficient:=-2;// Corresponds to E61a the a_p-coefficient of the q-expansion of the associated modular form which appears in Jacobian decomposition of quotient modular curve
 NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotientCurve);
 print NondegreedmaptoEC ;// List if any of the set (p^n, Integer) n<bound such that |X_0(N)/W_N(F_{p^n})|-degree*|EllipticCurve(F_{p^n})|=Integer, thus no degree map //between quotient modular curve to such elliptic curve defined over the rationals if the list is not empty, recall p does not divide N. In the example with
-//this method we know that there is no degree two map over the rationals from X_0(366)/<w_61,w_2> to the elliptic curve E61a, by use F_9-points.
+//this method we know that there is no degree two map over the rationals from X_0(366)/<w_61,w_2> to the elliptic curve E61a, by counting F_9-points.
 ```
 - For $X_0(308)/\langle w_4,w_7 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
 
@@ -58,7 +58,7 @@ genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/WN
 prec := 30; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
-print HH[1]; // Returns 11111111111111 implying that the function obtained que Q-Jacobian decomposition
+print HH[1]; // Returns 11111111111111 implying that the Magma function obtains the Q-Jacobian decomposition
 print HH[2]; // List the modular forms with q-expansion that are factor of the Jacobian, (could appear repeated if some factor of the Jacobian can appeared repeated)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2], with the same order that appear HH[2]
 p:=3;// A prime number not dividing the level N
@@ -72,8 +72,7 @@ print NondegreedmaptoEC ;// If there is a finite field F_{p^n} for n=1 to bound 
 
 ````
 
-- For $X_0(308)/\langle w_{44},w_{77} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
-
+- For $X_0(308)/\langle w_{44},w_{77} \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$.
 ```` magma
 
 load "funcions.m";
@@ -84,7 +83,7 @@ genusquotientcurve:=genereX0NQuotientWN(N,TN,t);
 print genusquotientcurve; // Return the genus of the quotient modular curve X0(N)/WN
 prec := 30; // Number of coefficients of the q-expansion
 HH := JacobianDecompositionQuotientX0NWN(N, TN, prec, t);
-print HH[1]; // Returns 0 or 000000000 implying that the function NOT obtain que Q-Jacobian decomposition (there are too much reaped modular forms!!!)
+print HH[1]; // Returns 0 or 000000000 implying that the Magma function DOES NOT obtain que Q-Jacobian decomposition (there are too much reaped modular forms!!!)
 print HH[2]; // List the modular forms with q-expansion that appear in the Jacobian, (and repetitions also)
 print HH[3]; // List the number fields of the list of modular forms given in HH[2].
 print HH[4];// List of the levels (recall a repeated form that appears at level y can appear repeated at level yk)
