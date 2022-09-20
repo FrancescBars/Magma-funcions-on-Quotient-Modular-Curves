@@ -2,7 +2,7 @@
 
 Different functions for quotient modular curves $X_0(N)/W_N$ with $W_N$ a subgroup of $B(N)$ the full subgroup of all Atkin-Lehner involutions of $X_0(N)$. 
 
-In particular functions to compute genus, $\mathbb{Q}$-Jacobian decomposition, number of points on a finite field of characteristic $p$ with $p\nmid N$, 
+In particular functions to compute genus, $\mathbb{Q}$-Jacobian decomposition, number of points over a finite field of characteristic $p$ with $p\nmid N$, 
 and testing by counting points in a finite field if we can discard a degree $d$ map from $X_0(N)/W_N$ to an elliptic curve that appears in the $\mathbb{Q}$-decomposition of the quotient modular curve. The subgroup $W_N$ could be also the trivial subgroup or the full $B(N)$.
 
 ## Examples
@@ -20,7 +20,7 @@ genus:=generexoN(N);
 print genus; //Return the genus of X_0(N)
 ```
 
-- For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. See not degree two map over the rationals to the elliptic curve E61a by counting $\mathbb{F}_9$-points of the quotient curve and the elliptic curve.
+- For $X_0(366) / \langle w_{61}, w_2 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. See there cannot be a degree two map over the rationals to the elliptic curve E61a by counting $\mathbb{F}_9$-points of the quotient curve and the elliptic curve.
 
 ```magma
 load "funcions.m";
