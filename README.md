@@ -3,7 +3,7 @@
 Different functions for quotient modular curves $X_0(N)/W_N$ with $W_N$ a subgroup of $B(N)$ the full subgroup of all Atkin-Lehner involutions of $X_0(N)$. 
 
 In particular functions to compute genus, $\mathbb{Q}$-Jacobian decomposition, number of points over a finite field of characteristic $p$ with $p\nmid N$, 
-and testing by counting points in a finite field if we can discard a degree $d$ map from $X_0(N)/W_N$ to an elliptic curve that appears in the $\mathbb{Q}$-decomposition of the quotient modular curve. The subgroup $W_N$ could be also the trivial subgroup or the full $B(N)$.
+and testing by counting points over a finite field if we can discard a degree $d$ map from $X_0(N)/W_N$ to an elliptic curve that appears in the $\mathbb{Q}$-decomposition of the quotient modular curve. The subgroup $W_N$ could be also the trivial subgroup or the full $B(N)$.
 
 ## Examples
 - Compute number of fixed points of Atkin-Lehner involution $w_d$ on $X_0(366)$ with $(d,N/d)=1$ and the genus of $X_0(366)$
@@ -46,7 +46,7 @@ NondegreedmaptoEC:=MapdegreedtoEC(p,degree,bound,apcoefficient,FpnpointsQuotient
 print NondegreedmaptoEC ;// List if any of the set (p^n, Integer) n<bound such that |X_0(N)/W_N(F_{p^n})|-degree*|EllipticCurve(F_{p^n})|=Integer, thus no degree map //between quotient modular curve to such elliptic curve defined over the rationals if the list is not empty, recall p does not divide N. In the example with
 //this method we know that there is no degree two map over the rationals from X_0(366)/<w_61,w_2> to the elliptic curve E61a, by counting F_9-points.
 ```
-- For $X_0(308)/\langle w_4,w_7 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non existence of degree $d$ maps to certain elliptic curves that appears in the Jacobian decomposition.
+- For $X_0(308)/\langle w_4,w_7 \rangle$: compute its genus, $\mathbb{Q}$-Jacobian decomposition and number of $\mathbb{F}_{p^n}$-points with $p\nmid N$. On non-existence of degree $d$ maps to certain elliptic curves that appear in the Jacobian decomposition.
 
 ```` magma
 
